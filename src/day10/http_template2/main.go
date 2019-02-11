@@ -30,7 +30,7 @@ func initTemplate(filename string) (err error) {
 }
 
 func main() {
-	initTemplate("C:/Users/chenyi.cai/Workspace/code/go-study/src/day10/http_template2/index.html")
+	initTemplate("C:/Workspace/go-study/src/day10/http_template2/index.html")
 	http.HandleFunc("/user/info", userInfo)
 	err := http.ListenAndServe("0.0.0.0:8080", nil)
 	if err != nil {
