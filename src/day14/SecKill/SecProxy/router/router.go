@@ -1,11 +1,13 @@
 package router
 
 import (
+    "day14/SecKill/SecProxy/controller"
+    "github.com/astaxie/beego/logs"
     "github.com/astaxie/beego"
-    "SecKill/SecProxy/controller"
 )
 
 func init() {
+    logs.Debug("enter route init")
     beego.Router("/seckill", &controller.SkillController{}, "*:SecKill")
-    beego.Router("/secinfo", &SkillController{}, "*;SecInfo")
+    beego.Router("/secinfo", &controller.SkillController{}, "*:SecInfo")
 }
